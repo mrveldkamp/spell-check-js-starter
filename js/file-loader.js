@@ -24,8 +24,8 @@ function loadAliceText() {
   fetch("data-files/AliceInWonderLand.txt")
     .then((rawData) => rawData.text())
     .then((textData) => {
-      aliceWords = textData.match(/(?<=^|[^a-z])[a-z](?:[a-z'\d]*[a-z])?/ig);
+      aliceWordsFull = textData.match(/(?<=^|[^a-z])[a-z](?:[a-z'\d]*[a-z])?/ig);
       console.log("Alice Full:")
-      console.log(aliceWords);
+      console.log(aliceWordsFull);
     })
 }
