@@ -4,7 +4,7 @@ function loadDictionary() {
   fetch("data-files/dictionary.txt")
     .then((rawData) => rawData.text())
     .then((textData) => {
-      dictionary = textData.split("\r\n");
+      dictionary = textData.split(/\r?\n/);
       console.log("Dictionary:");
       console.log(dictionary);
     })
